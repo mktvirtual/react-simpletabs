@@ -4,10 +4,6 @@
 var React = require('react');
 var classSet = require('../utils/classSet');
 
-if (process.env.NODE_ENV !== 'test') {
-  require('./react-simpletabs.css');
-}
-
 var Tabs = React.createClass({
   displayName: 'Tabs',
   propTypes: {
@@ -42,7 +38,7 @@ var Tabs = React.createClass({
   },
   render () {
     return (
-      <div className='tabs'>
+      <div className='Tabs'>
         {this._getMenuItems()}
         {this._getSelectedPanel()}
       </div>
@@ -79,7 +75,7 @@ var Tabs = React.createClass({
       var ref = `tab-menu-${index + 1}`;
       var title = $panel.props.title;
       var classes = classSet({
-        'tabs-menu-item': true,
+        'Tabs-item': true,
         'is-active': this.state.tabActive === (index + 1)
       });
 
@@ -93,8 +89,8 @@ var Tabs = React.createClass({
     });
 
     return (
-      <nav className='tabs-navigation'>
-        <ul className='tabs-menu'>{$menuItems}</ul>
+      <nav className='Tabs-navigation'>
+        <ul className='Tabs-menu'>{$menuItems}</ul>
       </nav>
     );
   },
@@ -103,7 +99,7 @@ var Tabs = React.createClass({
     var $panel = this.props.children[index];
 
     return (
-      <article ref='tab-panel' className='tab-panel'>
+      <article ref='tab-panel' className='Tab-panel'>
         {$panel}
       </article>
     );
