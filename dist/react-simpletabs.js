@@ -1,7 +1,7 @@
 /*!
  * 
  *  React Simpletabs - Just a simple tabs component built with React
- *  @version v0.4.21
+ *  @version v1.1.1-alpha
  *  @link https://github.com/pedronauck/react-simpletabs
  *  @license MIT
  *  @author Pedro Nauck (https://github.com/pedronauck)
@@ -69,10 +69,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(1);
 	var classSet = __webpack_require__(2);
 
-	if (true) {
-	  __webpack_require__(3);
-	}
-
 	var Tabs = React.createClass({
 	  displayName: 'Tabs',
 	  propTypes: {
@@ -107,7 +103,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  render:function () {
 	    return (
-	      React.createElement("div", {className: "tabs"}, 
+	      React.createElement("div", {className: "Tabs"}, 
 	        this._getMenuItems(), 
 	        this._getSelectedPanel()
 	      )
@@ -144,7 +140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var ref = ("tab-menu-" + (index + 1));
 	      var title = $panel.props.title;
 	      var classes = classSet({
-	        'tabs-menu-item': true,
+	        'Tabs-item': true,
 	        'is-active': this.state.tabActive === (index + 1)
 	      });
 
@@ -158,8 +154,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }.bind(this));
 
 	    return (
-	      React.createElement("nav", {className: "tabs-navigation"}, 
-	        React.createElement("ul", {className: "tabs-menu"}, $menuItems)
+	      React.createElement("nav", {className: "Tabs-navigation"}, 
+	        React.createElement("ul", {className: "Tabs-menu"}, $menuItems)
 	      )
 	    );
 	  },
@@ -168,7 +164,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var $panel = this.props.children[index];
 
 	    return (
-	      React.createElement("article", {ref: "tab-panel", className: "tab-panel"}, 
+	      React.createElement("article", {ref: "tab-panel", className: "Tab-panel"}, 
 	        $panel
 	      )
 	    );
@@ -216,12 +212,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Object.keys(classes).filter(function(className)  {return classes[className];}).join(' ');
 	};
 
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ])
